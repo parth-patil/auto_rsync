@@ -1,1 +1,10 @@
 Handy tool to setup a recursive watcher on a directory and rsync modified files to a remote host
+
+If you get an error saying that "upper limit on inotify watches reached", you will have to increase the max watches allowed for users. Using the following
+# cat /proc/sys/fs/inotify/max_user_watches
+8192
+# echo 16000 > /proc/sys/fs/inotify/max_user_watches
+# cat /proc/sys/fs/inotify/max_user_watches
+16000
+
+# Ref http://www.infoq.com/articles/inotify-linux-file-system-event-monitoring
