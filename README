@@ -1,0 +1,1 @@
+Handy tool to setup a recursive watcher on a directory and rsync modified files to a remote host
